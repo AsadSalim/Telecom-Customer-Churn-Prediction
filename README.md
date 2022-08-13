@@ -12,12 +12,11 @@
 * Python Version: 3.7
 * Packages: pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle
 * For Web Framework Requirements: pip install -r requirements.txt
-* Scraper Github: https://github.com/arapfaik/scraping-glassdoor-selenium
-* Scraper Article: https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905
 * Flask Productionization: https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
 
 ## Data Cleaning
-Cleaning summary
+In this section we loaded the data from the .csv file into a Pandas DataFrame. We first changed the <code>TotalCharges</code> column from <code>string</code> to <code>float</code>. Then we dropped all null values and also the <code>customerID</code> column.
+
 ## EDA
 EDA summary
 ## Model Building
@@ -35,8 +34,8 @@ I tried three different models:
 
 The Random Forest model far outperformed the other approaches on the test and validation sets.
 
-* Random Forest : MAE = 11.22
-* Linear Regression: MAE = 18.86
-* Ridge Regression: MAE = 19.67
+* Random Forest : MAE = 
+* Linear Regression: MAE = 
+* Ridge Regression: MAE = 
 
 ## Model Deployment
