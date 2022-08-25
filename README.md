@@ -13,6 +13,7 @@
 * Packages: pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle
 * Cleaning: https://stackoverflow.com/questions/13445241/replacing-blank-values-white-space-with-nan-in-pandas
 * Investigating association among categorical features: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
+* Model selection automation: https://www.youtube.com/watch?v=7uLzGRlXXDw
 * For Web Framework Requirements: pip install -r requirements.txt
 * Flask Productionization: https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
 
