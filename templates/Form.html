@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="output.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="">
+        <form action="{{ url_for('result')}}" method="POST">
+            
+            <div class="m-12 space-y-4 md:flex md:items-center md:space-y-0 md:space-x-20 sm:gap-4 ">
+                <div class="pt-5 ">
+                    <label class="text-base font-medium text-gray-900">Gender</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email" name="gender" type="radio" value="0" checked 
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email" class="ml-3 block text-sm font-medium text-gray-700">Male</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms" name="gender" type="radio" value="1"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms" class="ml-3 block text-sm font-medium text-gray-700">Female</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Senior Citizen</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="senior" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="senior" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Partner</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email3" name="partner" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email3" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="partner" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Dependents</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="dependents" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="dependents" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Phone Service</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="service" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="service" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Online Security</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="security" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="security" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div
+                class="m-12 space-y-4 md:flex md:items-center md:space-y-0 md:space-x-20 sm:gap-4 sm:border-t sm:border-gray-200">
+                <div class="pt-5 ">
+                    <label class="text-base font-medium text-gray-900">Online Backup</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email" name="backup" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms" name="backup" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Device Protection</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="protection" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="protection" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Tech Support</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email3" name="support" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email3" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="support" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Streaming TV</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="tv" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="tv" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Streaming Movies</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="movies" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="movies" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Paperless Billing</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="billing" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="billing" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div
+                class="m-12 space-y-4 md:flex md:items-center md:space-y-0 md:space-x-20 sm:gap-4 sm:border-t sm:border-gray-200">
+                <div class="pt-5 ">
+                    <label class="text-base font-medium text-gray-900">Multiple Lines</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email" name="lines" type="radio" value="1" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email" class="ml-3 block text-sm font-medium text-gray-700">Yes</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms" name="lines" type="radio" value="0"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Internet Service</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="internet" type="radio" value="0" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">DSL</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="internet" type="radio" value="1"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">Fiber
+                                    Optic</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="internet" type="radio" value="2"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">No</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Contract</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email3" name="contract" type="radio" value="0" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email3"
+                                    class="ml-3 block text-sm font-medium text-gray-700">Month-to-month</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="contract" type="radio" value="1"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">One Year</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="contract" type="radio" value="2"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">Two Years</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="pt-5">
+                    <label class="text-base font-medium text-gray-900">Payment Method</label>
+                    <!-- <p class="text-sm leading-5 text-gray-500">How do you prefer to receive notifications?</p> -->
+                    <fieldset class="mt-4">
+                        <div class="space-y-4">
+
+                            <div class="flex items-center">
+                                <input id="email2" name="payment" type="radio" value="0" checked
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="email2" class="ml-3 block text-sm font-medium text-gray-700">Bank transfer
+                                    (automatic)</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="payment" type="radio" value="1"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">Credit card
+                                    (automatic)</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="payment" type="radio" value="2"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">Electronic
+                                    Check</label>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="sms2" name="payment" type="radio" value="3"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                <label for="sms2" class="ml-3 block text-sm font-medium text-gray-700">Mailed
+                                    Check</label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+
+
+            </div>
+            <div
+                class="m-12 space-y-4 md:flex md:items-center md:space-y-0 md:space-x-20 sm:gap-4 sm:border-t sm:border-gray-200">
+
+                <div class="pt-5 ">
+                    <label for="price" class="block text-sm font-medium text-gray-700">Tenure (in months)</label>
+                    <div class="relative mt-1 rounded-md shadow-sm">
+
+                        <input type="number" name="tenure" id="price" required="required" 
+                            class="block w-full rounded-md border-gray-300  pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            placeholder="Example: 6" aria-describedby="price-currency">
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                            <span class="text-gray-500 sm:text-sm" id="price-currency">Months</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pt-5 ">
+                    <label for="price" class="block text-sm font-medium text-gray-700">Monthly Charges</label>
+                    <div class="relative mt-1 rounded-md shadow-sm">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                            <span class="text-gray-500 sm:text-sm">$</span>
+                        </div>
+                        <input type="number" name="monthly" id="price" required="required" 
+                            class="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            placeholder="0.00" aria-describedby="price-currency">
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                            <span class="text-gray-500 sm:text-sm" id="price-currency">USD</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pt-5 ">
+                    <label for="price" class="block text-sm font-medium text-gray-700">Total Charges</label>
+                    <div class="relative mt-1 rounded-md shadow-sm">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                            <span class="text-gray-500 sm:text-sm">$</span>
+                        </div>
+                        <input type="number" name="total" id="price" required="required" 
+                            class="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            placeholder="0.00" aria-describedby="price-currency">
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                            <span class="text-gray-500 sm:text-sm" id="price-currency">USD</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 text-left sm:px-6">
+                <h2> Input Vector: {{ features }}</h2>
+                <h1> Churn: {{ churn }}</h1>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                <button type="submit"
+                    class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Predict</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+
+    </div>
+
+
+</body>
+
+</html>
