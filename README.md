@@ -10,7 +10,7 @@
 ## Code and Resources Used
 * Dataset: Telco Customer Churn https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 * Python Version: 3.9
-* Packages: pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle
+* Packages: pandas, numpy, sklearn, matplotlib, seaborn, flask, json, pickle, xgboost, imblearn
 * Cleaning: https://stackoverflow.com/questions/13445241/replacing-blank-values-white-space-with-nan-in-pandas
 * Investigating association among categorical features: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
 * Model selection automation: https://www.youtube.com/watch?v=7uLzGRlXXDw
