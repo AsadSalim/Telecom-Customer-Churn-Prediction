@@ -78,7 +78,7 @@ def constructInput():
 
 @app.route("/")
 def home():
-    return render_template("Form.html")
+    return render_template("hero.html")
 
 @app.route("/form", methods = ['GET'])
 def form():
@@ -94,7 +94,12 @@ def result():
         prediction = model.predict(finalInput)
 
         output = round(prediction[0], 2)
-        return render_template("Form.html", churn = output, features = input)
+
+    if output == 1:
+        churn = "Yes"
+    else:
+        churn = "No"
+        return render_template("Form.html", churn = churn, features = input)
     return "No Data"
 
 

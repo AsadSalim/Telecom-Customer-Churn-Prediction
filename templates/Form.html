@@ -435,13 +435,12 @@
 
                 </div>
             </div>
-            <div class="bg-gray-50 px-4 py-3 text-left sm:px-6">
-                <h2> Input Vector: {{ features }}</h2>
-                <h1> Churn: {{ churn }}</h1>
-            </div>
-            <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+            <div class="flex bg-gray-50 px-4 py-3 text-left sm:px-6">
+                <h1 class="text-lg font-bold"> Churn: {{ churn }}</h1>
+                
                 <button type="submit"
-                    class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Predict</button>
+                    class="inline-flex ml-24 justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Predict</button>
+            
             </div>
         </form>
     </div>
