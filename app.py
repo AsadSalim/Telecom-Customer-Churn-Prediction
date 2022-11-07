@@ -1,4 +1,3 @@
-from flask import Flask
 from flask import Flask, request, jsonify, render_template, url_for
 import pickle
 import numpy as np
@@ -30,6 +29,8 @@ listOfIds = [
 ]
 
 # Let's get the data from the form
+
+
 def getChoices(listOfIds):
     choices = []
     ids = []
@@ -61,46 +62,43 @@ def getOneHotFeatures(choices):
 
     features = internetFeats + contractFeats + paymentFeats
     return features
-    
 
 
 # The making of the input vestor for the model
 def constructInput():
     choices, _ = getChoices(listOfIds)
     oneHotFeatures = getOneHotFeatures(choices)
-    
+
     input = choices[0:16] + oneHotFeatures
 
     return input
-
-    
 
 
 @app.route("/")
 def home():
     return render_template("hero.html")
 
-@app.route("/form", methods = ['GET'])
-def form():
-    return "Form"
+
+@app.route("/predict", methods=['GET'])
+def predict():
+    return render_template("Form.html")
 
 
-@app.route("/result", methods = ['GET', 'POST'])
+@app.route("/result", methods=['GET', 'POST'])
 def result():
-    if request.method == 'POST':
-        features, ids = getChoices(listOfIds)
-        input = constructInput()
-        finalInput = [np.array(input)]
-        prediction = model.predict(finalInput)
 
-        output = round(prediction[0], 2)
+    features, ids = getChoices(listOfIds)
+    input = constructInput()
+    finalInput = [np.array(input)]
+    prediction = model.predict(finalInput)
+
+    output = round(prediction[0], 2)
 
     if output == 1:
         churn = "Yes"
     else:
         churn = "No"
-        return render_template("Form.html", churn = churn, features = input)
-    return "No Data"
+    return render_template("Form.html", churn=churn, features=features, ids=ids, input=finalInput)
 
 
 if __name__ == "__main__":
