@@ -29,10 +29,10 @@
 
 ## Data Cleaning
 Since the dataset is from Kaggle, this saved us a lot of work and it did not need much effort to clean. In this section we loaded the data from the .csv file into a Pandas DataFrame then carried out the following steps:
-    - The 'TotalCharges' column is converted from an object type to float64.
-    - Spaces as ' ' is replaced by Null object which Pandas can recognize.
-    - Null values was dropped as they had a small percentage with regard to the Dataframe dimensions.
-    - Drop the customerID column since it's irrelevant.
+    * The 'TotalCharges' column is converted from an object type to float64.
+    * Spaces as ' ' is replaced by Null object which Pandas can recognize.
+    * Null values was dropped as they had a small percentage with regard to the Dataframe dimensions.
+    * Drop the customerID column since it's irrelevant.
 
 ## EDA
 EDA summary
