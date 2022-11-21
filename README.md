@@ -52,21 +52,21 @@ and will be used again in the deployment phase.
 
 The XG Boost outperformed the other approaches on the test and validation sets as follows:
 
-* Decision Tree = 
+### Decision Tree = 
 - Accuracy: 0.9304
 - F1 score: 0.9303
 - Precision: 0.9215
 - Recall: 0.9457
 - ROC AUC score: 0.9299
 
-* Random Forest = 
+### Random Forest = 
 - Accuracy: 0.9421
 - F1 score: 0.9421
 - Precision: 0.944
 - Recall: 0.944
 - ROC AUC score: 0.9421
 
-* XG Boost = 
+### XG Boost = 
 - Accuracy: 0.9512
 - F1 score: 0.9512
 - Precision: 0.9465
