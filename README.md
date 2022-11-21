@@ -35,25 +35,42 @@ Since the dataset is from Kaggle, this saved us a lot of work and it did not nee
 * Drop the customerID column since it's irrelevant.
 
 ## EDA
-EDA summary
+Used Matplotlib and Seaborn graphs to explore some of the important columns to gain some understanding of them. In addition to that Dython was used to
+carry out analysis using the Categorical Features i.e. explore association among categorical features. Finally we used Pandas to answer some questions
+related to the dataset.
 
 ## Model Building
-First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.
+Before training the model, we carried out some cleaning to the data to ensure that the model can fully understand it. Then we used One Hot Encoder to  transform categorical variables into dummy variables. We also split the data into input and output. Then we handled the unbalance in the data using 
+down sampling to ensure better performance without leaning to one category over the other.
 
-I tried three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.
+Then we started testing Three models: Decision Trees, Random Forests and XGBoost. It turned out that XGBoost superior to the other two. So we took it further to perform hyperparameter tuning to get optimized performance. This step was done using RandomizedSearchCV from the Sklearn's model_selection module.
 
-I tried three different models:
-
-* Multiple Linear Regression – Baseline for the model
-* Lasso Regression – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
-* Random Forest – Again, with the sparsity associated with the data, I thought that this would be a good fit.
+Finally we saved to the trained model using the Pickle method for later use without the need to retrain it again. This file was saved on the same working directory
+and will be used again in the deployment phase.
 
 ## Model performance
 
-The Random Forest model far outperformed the other approaches on the test and validation sets.
+The XG Boost outperformed the other approaches on the test and validation sets as follows:
 
-* Random Forest : MAE = 
-* Linear Regression: MAE = 
-* Ridge Regression: MAE = 
+* Decision Tree = 
+- Accuracy: 0.9304
+- F1 score: 0.9303
+- Precision: 0.9215
+- Recall: 0.9457
+- ROC AUC score: 0.9299
+
+* Random Forest = 
+- Accuracy: 0.9421
+- F1 score: 0.9421
+- Precision: 0.944
+- Recall: 0.944
+- ROC AUC score: 0.9421
+
+* XG Boost = 
+- Accuracy: 0.9512
+- F1 score: 0.9512
+- Precision: 0.9465
+- Recall: 0.9597
+- ROC AUC score: 0.9509
 
 ## Model Deployment
