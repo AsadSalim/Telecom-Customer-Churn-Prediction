@@ -43,30 +43,31 @@ related to the dataset.
 Before training the model, we carried out some cleaning to the data to ensure that the model can fully understand it. Then we used One Hot Encoder to  transform categorical variables into dummy variables. We also split the data into input and output. Then we handled the unbalance in the data using 
 down sampling to ensure better performance without leaning to one category over the other.
 
-Then we started testing Three models: Decision Trees, Random Forests and XGBoost. It turned out that XGBoost superior to the other two. So we took it further to perform hyperparameter tuning to get optimized performance. This step was done using RandomizedSearchCV from the Sklearn's model_selection module.
+Then we started testing Three models: Decision Trees, Random Forests and XGBoost. It turned out that XGBoost is superior to the other two. So we took it further to perform hyperparameter tuning to get optimized performance. This step was done using RandomizedSearchCV from the Sklearn's model_selection module.
 
-Finally we saved to the trained model using the Pickle method for later use without the need to retrain it again. This file was saved on the same working directory
-and will be used again in the deployment phase.
+Before saving the model it was critical to train the model with the best obtained parameters using the whole data. Otherwise we would be throughing away potentially valuable data that the model can learn from.
+
+Finally we saved the trained model using the Pickle method for later use without the need to retrain it again and again. This file was saved on the same working directory and will be used again in the deployment phase.
 
 ## Model performance
 
 The XG Boost outperformed the other approaches on the test and validation sets as follows:
 
-### Decision Tree = 
+### Decision Tree:
 - Accuracy: 0.9304
 - F1 score: 0.9303
 - Precision: 0.9215
 - Recall: 0.9457
 - ROC AUC score: 0.9299
 
-### Random Forest = 
+### Random Forest:
 - Accuracy: 0.9421
 - F1 score: 0.9421
 - Precision: 0.944
 - Recall: 0.944
 - ROC AUC score: 0.9421
 
-### XG Boost = 
+### XG Boost:
 - Accuracy: 0.9512
 - F1 score: 0.9512
 - Precision: 0.9465
@@ -74,3 +75,4 @@ The XG Boost outperformed the other approaches on the test and validation sets a
 - ROC AUC score: 0.9509
 
 ## Model Deployment
+
