@@ -9,7 +9,6 @@
 - Built a client facing API using flask
 
 ## Code and Resources Used
-
 - Dataset: Telco Customer Churn https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 - Python Version: 3.9
 - Packages: pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle
@@ -17,6 +16,15 @@
 - Investigating association among categorical features: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
 - For Web Framework Requirements: pip install -r requirements.txt
 - Flask Productionization: https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
+=======
+* Dataset: Telco Customer Churn https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+* Python Version: 3.9
+* Packages: pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle
+* Cleaning: https://stackoverflow.com/questions/13445241/replacing-blank-values-white-space-with-nan-in-pandas
+* Investigating association among categorical features: https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9
+* Model selection automation: https://www.youtube.com/watch?v=7uLzGRlXXDw
+* For Web Framework Requirements: pip install -r requirements.txt
+* Flask Productionization: https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
 
 ## Data Cleaning
 
@@ -53,6 +61,6 @@ We used Flask as a backend to serve the API endpoints and basic HTML and tailwin
 
 First, we created a Flask app, then created 3 API endpoints. The "/" endpoint is the home page, which will render the landing page with the project’s info along with our contact details. And the "/predict" endpoint will redirect you to the input form, which you can submit all the features you want to predict the churn of. The last "/result" endpoint will render the same prediction page but with the result of the prediction in the bottom.
 
-TO deploy the website, we used render.com, which connects directly to our GitHub repo. It has easy steps to deploy your projects for free. We originally wanted to use Heroku, but sadly it terminated it's free tier options.
+To deploy the website, we used render.com, which connects directly to our GitHub repo. It has easy steps to deploy your projects for free. We originally wanted to use Heroku, but sadly it terminated it's free tier options.
 
 All and all, this step was very fun and informative. It gave us a glimpse of what a Machine Learning Engineer job is, and how important to communicate with the rest of the team to make sure the project see the light.
